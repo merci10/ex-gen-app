@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  header
+    h1= title
+    
+  div(role="main")
+    p= content
+    form(method="post", action="/hello/edit")
+      input(type="hidden", name="id", value=`${mydata.id}`)
+      table
+        tr
+          th NAME
+          td: input(type="text", name="name", value=`${mydata.name}`)
+        tr
+          th MAIL
+          td: input(type="text", name="mail", value=`${mydata.mail}`)
+        tr
+          th AGE
+          td: input(type="text", name="age", value=`${mydata.age}`)
+        tr
+          th
+          td: input(type="submit", value="更新")

@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  header
+    h1= title
+    
+  div(role="main")
+    p= content
+    table
+      tr
+        th NAME
+        td= mydata.name
+      tr
+        th MAIL
+        td= mydata.mail
+      tr
+        th AGE
+        td= mydata.age
+      tr
+        th
+        td
+    form(method="post", action="/hello/delete")
+      input(type="hidden", name="id", value=`${mydata.id}`)
+      input(type="submit", value="削除")

@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+  header
+    h1= title
+  
+  div(role="main")
+    table
+      each obj in content
+        tr
+          th= obj.id
+          td= obj.name
+          td= obj.mail
+          td= obj.age

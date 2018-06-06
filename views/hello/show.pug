@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  header
+    h1= title
+    
+  div(role="main")
+    p= content
+    table
+      tr
+        th ID
+        td= mydata.id  
+      tr
+        th NAME
+        td= mydata.name
+      tr
+        th MAIL
+        td= mydata.mail
+      tr
+        th AGE
+        td= mydata.age
+        
